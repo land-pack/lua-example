@@ -70,20 +70,6 @@ end
 
 s = 'node|host|id'
 
--- function split(s, delimiter) 
--- 	t = {}
--- 	delimiter = delimiter or '|'
--- 	regx = "(%w+)|(%w+)"
---     for match in (s..delimiter):gmatch("(.-)"..delimiter) do
--- 		print('>>>> '..v )
--- 		table.insert(t, v)
--- 	end
--- 	return t
--- end 
-
--- p = split(s, '|')
-
-
 function string.split(str, delimiter)
 	if str==nil or str=='' or delimiter==nil then
 		return nil
