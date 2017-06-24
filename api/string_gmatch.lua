@@ -66,3 +66,39 @@ for k, v in ipairs(origin_node_list_new) do
 	print('the host is '..v)
 end 
 
+---split a strings ---
+
+s = 'node|host|id'
+
+-- function split(s, delimiter) 
+-- 	t = {}
+-- 	delimiter = delimiter or '|'
+-- 	regx = "(%w+)|(%w+)"
+--     for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+-- 		print('>>>> '..v )
+-- 		table.insert(t, v)
+-- 	end
+-- 	return t
+-- end 
+
+-- p = split(s, '|')
+
+
+function string.split(str, delimiter)
+	if str==nil or str=='' or delimiter==nil then
+		return nil
+	end
+	
+    local result = {}
+    for match in (str..delimiter):gmatch("(.-)"..delimiter) do
+        table.insert(result, match)
+    end
+    return result
+end
+
+p = string.split(s, '|')
+print(#p)
+
+print(p[1])
+print(p[2])
+print(p[3])
